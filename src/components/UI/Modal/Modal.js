@@ -7,9 +7,13 @@ import Backdrop from '../Backdrop/Backdrop';
 class modal extends Component {
     //can be a functional component
 
-    componentWillUpdate () {
-        console.log('[Modal] WillUpdate');
+    shouldComponentUpdate(nextProps, nextState)
+    {
+        return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
     }
+    // componentWillUpdate () {
+    //     console.log('[Modal] WillUpdate');
+    // }
     render () {
         return (
             <Aux>
