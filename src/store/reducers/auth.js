@@ -1,12 +1,12 @@
 import * as actionTypes from '../actions/actionTypes';
-import { updateObject } from '../utility';
+import { updateObject } from '../../shared/utility';
 
 const initialState = {
     token: null,
     userId: null,
     error: null,
     loading: false,
-     authRedirectPath: '/'
+    authRedirectPath: '/'
 };
 
 const authStart = ( state, action ) => {
@@ -27,14 +27,14 @@ const authFail = (state, action) => {
         error: action.error,
         loading: false
     });
-}
-
-const authLogout = (state, action) => {
-    return updateObject(state, {token: null, userId: null});
 };
 
-const setAuthRedirectPath = (state,action) => {
-    return updateObject(state, {authRedirectPath: action.path})
+const authLogout = (state, action) => {
+    return updateObject(state, { token: null, userId: null });
+};
+
+const setAuthRedirectPath = (state, action) => {
+    return updateObject(state, { authRedirectPath: action.path })
 }
 
 const reducer = ( state = initialState, action ) => {
