@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-<h1> BurgerBulder </h1>
+<h1> BurgerBuilder </h1>
 
 <h2> https://burgerbuilder-78c2d.firebaseapp.com/ </h2>
 
